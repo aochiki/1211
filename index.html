@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ファイルフォーマッター</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ファイルフォーマッター</h1>
+        <div class="upload-form">
+            <div>
+                <p>複数のファイルを選択してください：</p>
+                <input type="file" id="files" multiple accept=".csv,.txt,.xls,.xlsx" class="file-input">
+                <p class="help-text">対応形式: CSV, TXT, Excel (XLS, XLSX)</p>
+            </div>
+            <button id="mergeButton" class="button">結合してダウンロード</button>
+        </div>
+        <div id="preview" class="preview"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

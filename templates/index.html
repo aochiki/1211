@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV フォーマッター</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .upload-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .file-input {
+            padding: 10px;
+            border: 2px dashed #ccc;
+            border-radius: 4px;
+        }
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSV フォーマッター</h1>
+        <form class="upload-form" method="POST" enctype="multipart/form-data">
+            <div>
+                <p>複数のCSVファイルを選択してください：</p>
+                <input type="file" name="files[]" multiple accept=".csv" class="file-input" required>
+            </div>
+            <button type="submit" class="submit-button">結合してダウンロード</button>
+        </form>
+    </div>
+</body>
+</html>
